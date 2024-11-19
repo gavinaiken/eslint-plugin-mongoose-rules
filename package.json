@@ -1,0 +1,27 @@
+{
+  "name": "eslint-plugin-mongoose-rules",
+  "version": "1.0.0",
+  "author": "Gavin Aiken <gavin@aiken.org.uk>",
+  "description": "ESLint plugin that checks for problems in mongoose.js usage",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "lint": "eslint ./",
+    "test": "npm run lint && npm run unit-test",
+    "test-watch": "mocha --node-option=watch tests/**/*.js",
+    "unit-test": "nyc mocha tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gavinaiken/eslint-plugin-mongoose-rules.git"
+  },
+  "dependencies": {
+    "globals": "^15.12.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.2",
+    "eslint": "^9.2.0",
+    "mocha": "^10.0.0",
+    "nyc": "^17.1.0"
+  }
+}
